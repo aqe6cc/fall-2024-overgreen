@@ -1,7 +1,7 @@
 [gd_scene load_steps=23 format=3 uid="uid://2t4vf8jqxla0"]
 
 [ext_resource type="Texture2D" uid="uid://bd5l0mfcr5onr" path="res://Art/AnimationSheet_Character.png" id="1_7lgf5"]
-[ext_resource type="Script" path="res://Characters/player.gd" id="1_8plwf"]
+[ext_resource type="Script" path="res://Characters/player/player.gd" id="1_8plwf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vhtgm"]
 atlas = ExtResource("1_7lgf5")
@@ -152,8 +152,8 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_06x8j"]
-height = 28.5
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4lifr"]
+size = Vector2(14, 24)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_8plwf")
@@ -166,7 +166,5 @@ autoplay = "idle"
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 0)
-shape = SubResource("CapsuleShape2D_06x8j")
-
-[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_4lifr")
