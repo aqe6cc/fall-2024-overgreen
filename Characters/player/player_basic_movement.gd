@@ -2,15 +2,14 @@ extends Node
 
 class_name PlayerBasicMovement
 
-var player : CharacterBody2D
+var player: CharacterBody2D
 
-# Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity : float = ProjectSettings.get_setting("physics/2d/default_gravity")
+# get the gravity from the project settings to be synced with RigidBody nodes
+var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
 
-var velocity : Vector2
-var was_in_air : bool = false
-var has_double_jumped : bool = false
-
+var velocity: Vector2
+var was_in_air: bool = false
+var has_double_jumped: bool = false
 
 
 func _init(player_node):

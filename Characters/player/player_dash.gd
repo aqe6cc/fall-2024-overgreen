@@ -2,7 +2,7 @@ extends Node
 
 class_name PlayerDash
 
-var player : CharacterBody2D
+var player: CharacterBody2D
 
 func _init(player_node):
 	player = player_node
