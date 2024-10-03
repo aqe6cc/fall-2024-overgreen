@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://cmwyu2y3h51ci"]
+
+[ext_resource type="Script" path="res://character_body_2d.gd" id="1_w75wi"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pyfa7"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Slithering",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e0yoo"]
+
+[node name="SnakeMob" type="CharacterBody2D"]
+script = ExtResource("1_w75wi")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_pyfa7")
+animation = &"Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_e0yoo")
